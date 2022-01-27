@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+body {
+  text-align: center;
+  /* background-color: #000; */
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  background: #333 url('./img/first.jpeg') no-repeat center center / cover;
+  color: #ccc;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: rgb(94, 95, 93);
+
+  border-radius: 20px;
+  padding: 30px 60px;
+  width: 100vh;
+}
+
+.again {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.75rem;
+  font-weight: 200;
+}
+
+.again:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+.action {
+  max-width: 800px;
+  padding: 40px 0;
+  margin: 0 auto;
+  background-color: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.choices {
+  flex: 1 1 30%;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  margin: 20px;
+  animation-name: anim-fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 100%;
+  max-width: 120px;
+}
+
+.display-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.option {
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  padding: 10px;
+  margin: 10px;
+  border-color: rgba(0, 0, 0, 0.7);
+}
+
+.divider {
+  font-size: 3em;
+}
+
+#results {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ccc
+}
+
+#rock {
+  background-color: #bbb;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7);
+  height: 150px;
+  width: 150px;
+}
+
+#paper {
+   background-color: #bbb;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7);
+  height: 150px;
+  width: 150px;
+}
+
+#scissors {
+   background-color: #bbb;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7);
+  height: 150px;
+  width: 150px;
+}
