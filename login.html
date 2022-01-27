@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="type.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>rps-scissors</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <button id="again" class="btn again">Play Again</button>
+      <h1>
+        The Rock is Ready to Smash!
+        <span
+          class="txt-type"
+          data-wait="3000"
+          data-words='["Lets Play", "Rock", "Paper", "Scissors"]'
+        ></span>
+      </h1>
+      <h2>A Five Round Game of Rock, Paper, Scissors!!!</h2>
+
+      <h2>
+        <div><span id="results"></span></div>
+        <div><span id="roundTie"></span></div>
+        <div><span id="roundWin"></span></div>
+        <div><span id="roundLose"></span></div>
+        Player <span id="player-score">0</span> -
+        <span id="computer-score">0</span> Computer
+      </h2>
+      <div class="display-options">
+        <div class="option">
+          <img id="player-option" src="./img/Rock.svg" alt="" />
+        </div>
+        <div class="divider">VS</div>
+        <div class="option">
+          <img id="computer-option" src="./img/Rock.svg" alt="" />
+        </div>
+      </div>
+      <h2>Click on image below to make a move:</h2>
+      <div class="action">
+        <input
+          class="choices"
+          type="image"
+          src="./img/the-rock.jpeg"
+          value="Rock"
+          id="rock"
+        />
+        <input
+          class="choices"
+          type="image"
+          src="./img/wrinkled-paper.jpg"
+          value="Paper"
+          id="paper"
+        />
+        <input
+          class="choices"
+          type="image"
+          src="./img/scissors-comb.jpg"
+          value="Scissors"
+          id="scissors"
+        />
+      </div>
+    </div>
+    <!-- <button id="rock" class="choices">Rock</button>
+    <button id="paper" class="choices">Paper</button>
+    <button id="scissors" class="choices">Scissors</button> -->
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
