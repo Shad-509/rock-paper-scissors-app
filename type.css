@@ -6,7 +6,7 @@ body {
   height: 100vh;
   background: #333 url('first.jpeg') no-repeat center center / cover;
   color: #ccc;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -55,7 +55,29 @@ h2 {
 @media (max-width: 560px) {
   #container {
     padding: 5px 10px;
+    max-width: 600px;
+    /* width: 50vh; */
   }
+
+  #action {
+    max-width: 450px;
+  }
+
+  #rock {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+   #paper {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+   #scissors {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
   #again {
     font-size: 1.25rem;
   }
