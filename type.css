@@ -28,64 +28,152 @@ h2 {
   border-right: 0.2rem solid #777;
 }
 
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
 
-@media (max-width: 800px) {
-  #container {
-    padding: 10px 20px;
-  }
 
-  #again {
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 560px) {
+@media (max-width: 1200px) {
   #container {
     padding: 5px 10px;
-    max-width: 600px;
+    max-width: 900px;
     /* width: 50vh; */
   }
 
   #action {
-    max-width: 450px;
+    max-width: 700px;
+  }
+
+   #player-option {
+    max-width: 75px;
+  }
+
+  #divider {
+    font-size: 45px;
+  }
+
+  #computer-option {
+    max-width: 75px;
   }
 
   #rock {
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 100px;
+    max-height: 100px;
   }
 
-   #paper {
-    max-width: 75px;
-    max-height: 75px;
+  #paper {
+    max-width: 100px;
+    max-height: 100px;
   }
 
-   #scissors {
-    max-width: 75px;
-    max-height: 75px;
+  #scissors {
+    max-width: 100px;
+    max-height: 100px;
   }
 
   #again {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   h1 {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
+  }
+
+@media (max-width: 800px) {
+  #container {
+    padding: 5px 10px;
+    max-width: 560px;
+    /* width: 50vh; */
+  }
+
+  #action {
+    max-width: 500px;
+  }
+
+   #player-option {
+    max-width: 45px;
+  }
+
+  #divider {
+    font-size: 25px;
+  }
+
+  #computer-option {
+    max-width: 45px;
+  }
+
+  #rock {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #paper {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #scissors {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #again {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: .75rem;
+  }
+
+@media (max-width: 600px) {
+  #container {
+    padding: 5px 10px;
+    max-width: 460px;
+    /* width: 50vh; */
+  }
+
+  #action {
+    max-width: 400px;
+  }
+
+   #player-option {
+    max-width: 35px;
+  }
+
+  #divider {
+    font-size: 20px;
+  }
+
+  #computer-option {
+    max-width: 35px;
+  }
+
+  #rock {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #paper {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #scissors {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #again {
+    font-size: .75rem;
+  }
+  h1 {
+    font-size: .75rem;
+  }
+
+  h2 {
+    font-size: .25rem;
   }
 }
