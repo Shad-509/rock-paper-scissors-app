@@ -1,4 +1,3 @@
-// I got the idea for this code from a tutorial from Brad Traversy
 // const TypeWriter = function (txtElement, words, wait = 3000) {
 //   this.txtElement = txtElement;
 //   this.words = words;
@@ -52,18 +51,20 @@
 //   setTimeout(() => this.type(), typeSpeed);
 // }
 
+
+
 // ES6 Class
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = '';
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
+      this.txtElement = txtElement;
+      this.words = words;
+      this.txt = '';
+      this.wordIndex = 0;
+      this.wait = parseInt(wait, 10);
+      this.type();
+      this.isDeleting = false;
   }
-  type() {
+  type(){
     // Current index of word
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
@@ -117,3 +118,4 @@ function init() {
   // Initialize the TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+

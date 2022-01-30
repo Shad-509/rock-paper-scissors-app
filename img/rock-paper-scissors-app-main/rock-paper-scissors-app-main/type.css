@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  background: #333 url('first.jpeg') no-repeat center center / cover;
+  color: #ccc;
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: #aaa;
+}
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+
+
+
+@media (max-width: 1200px) {
+  #container {
+    padding: 5px 10px;
+    max-width: 900px;
+    /* width: 50vh; */
+  }
+
+  #action {
+    max-width: 700px;
+  }
+
+   #player-option {
+    max-width: 75px;
+  }
+
+  #divider {
+    font-size: 45px;
+  }
+
+  #computer-option {
+    max-width: 75px;
+  }
+
+  #rock {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  #paper {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  #scissors {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  #again {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+@media (max-width: 800px) {
+  #container {
+    padding: 5px 10px;
+    max-width: 560px;
+    /* width: 50vh; */
+  }
+
+  #action {
+    max-width: 500px;
+  }
+
+   #player-option {
+    max-width: 45px;
+  }
+
+  #divider {
+    font-size: 25px;
+  }
+
+  #computer-option {
+    max-width: 45px;
+  }
+
+  #rock {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #paper {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #scissors {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  #again {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: .75rem;
+  }
+
+@media (max-width: 600px) {
+  #container {
+    padding: 5px 10px;
+    max-width: 460px;
+    /* width: 50vh; */
+  }
+
+  #action {
+    max-width: 400px;
+  }
+
+   #player-option {
+    max-width: 35px;
+  }
+
+  #divider {
+    font-size: 20px;
+  }
+
+  #computer-option {
+    max-width: 35px;
+  }
+
+  #rock {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #paper {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #scissors {
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  #again {
+    font-size: .75rem;
+  }
+  h1 {
+    font-size: .75rem;
+  }
+
+  h2 {
+    font-size: .25rem;
+  }
+}
