@@ -1,23 +1,11 @@
-// You create a variable with the keyword let , const , or var followed by the name of your variable.
-// querySelectorAll is a method that returns a list of the elements that match a specified CSS selector(s) in the document.
-// forEach is a method that executes a provided function once for each array element.
-
-// forEach also takes a callback function as an argument.
-// The callback function is executed for each element in the array.
-// The call back function is passed on three arguments.
-// The first argument is the current element being processed.
-// The second argument is the index of the current element being processed.
-// The third argument is the array object.
-// The callback function can be used to update the score.
-// choices is a variable that contains the choices of the player and computer.
-// textContent is a property that sets or returns the text content of the specified node.
-// const stands for constant. It is used to declare a variable that cannot be reassigned.
-// Let and var can be reassigned.
-// Without using the querySelectorAll method, we would not be able to create our forEach loop because querySelectorAll returns a list of the elements in the document that match a specified CSS selector(s) such as #rock, #paper, #scissors this is why we need to use the querySelectorAll method because it returns a list of elements that we can use in our forEach loop to iterate through the list of elements. A callback function is a function inside the parentheses of another function and example in our code is the function choice inside the forEach method. The list of elements being used are the choices of the player and computer. We can use the forEach method to iterate through the list of elements. We pass the callback function to the forEach method. The callback function is executed for each element in the array.
-// Use a constant to declare a variable choices that contains the choices of the player and computer.
-// const stands for constant. It is used to declare a variable that cannot be reassigned.
-// Initialized the choices variable to = document.querySelectorAll('.choices') now that it is initalized we can use the forEach method to iterate through the list of elements that are returned by the querySelectorAll method and pass the callback function to the forEach method to execute the callback function for each element in the array which is the choices of the player and computer. The choices are (#rock, #paper, #scissors).
+// We start by creating a variable called choices.
+// The variable is declared with the const keyword.
+//And initalize to the querySelectorAll method that returns a list of the elements in the document that match a specified CSS selector(s) such as #rock, #paper, #scissors.
+//  now that it is initalized we can use the forEach method to iterate through the list of elements that are returned by the querySelectorAll method. It then will pass the callback function to the forEach method to execute the callback function for each element in the array which is the choices of the player.
 const choices = document.querySelectorAll('.choices');
+// We also create variables with the let keyword.
+// The let keyword is used to declare a variable that can be reassigned.
+// let highScore = 0;  variable that contains the high score. It is initialized to 0.
 let highscore = 0;
 let playerScore = 0;
 let computerScore = 0;
@@ -29,49 +17,47 @@ const btnPaper = document.getElementById('paper');
 // getElementById is a method that returns the element with the specified id in this case 'scissors' is the id
 const btnScissors = document.getElementById('scissors');
 //// getElementById is a method that returns the element with the specified id in this case 'results' is the id
+// getElementById is a method that returns the element with the specified id in this case 'results' is the id
 const displayResult = document.getElementById('results');
-
+// getElementById is a method that returns the element with the specified id in this case 'roundTie' is the id
 const roundTie = document.getElementById('roundTie');
+// getElementById is a method that returns the element with the specified id in this case 'roundWin' is the id
 const roundWin = document.getElementById('roundWin');
+// getElementById is a method that returns the element with the specified id in this case 'roundLose' is the id
 const roundLose = document.getElementById('roundLose');
-// .again is the class that is added to the button.
-// playAgain is set to the class that is added to the button in this case it is '.again'.
 
+// querySelector is a method that returns the first element that matches a specified CSS selector(s) in the document. .again is the class that we grab from the button. So we can do something with the button.
 const playAgain = document.querySelector('.again');
 
 // updateMoves takes in the playerInput and computerInput and updates the moves.
 // Two parameters are passed to the function.
 function updateMoves(playerInput, computerInput) {
-  // Update moves
-  // the image of the player's choice is displayed in the player's move box and the computer's choice is displayed in the computer's move box.
-  // The image is dynamically changed to the image of the player's choice.
-  // The image is dynamically changed to the image of the computer's choice.
-  // Using template literals, the player's choice is displayed in the player's move box.
-  // Same for the computer's choice.
-  // Template literals are string literals allowing embedded expressions.
-  // embedded expressions are expressions of the form ${playerInput} or ${computerInput} dynamically change the image of the player's and computer's choice.}
-  // we use ${} to embed the expression expr in the template literal.
-
+  // `./img/${playerInput}.svg` is a template literal that returns the path to the image file for the player to display on the screen.
   document.getElementById('player-option').src = `./img/${playerInput}.svg`;
+  // the player-option allows us to dynamically change the image of the player. by setting the src attribute  equal to the information that is in the template literal. we can change the image when the player clicks on the rock, paper, or scissors buttons.
   document.getElementById('computer-option').src = `./img/${computerInput}.svg`;
+  // `./img/${computerInput}.svg` and `./img/${playerInput}.svg` are template literal that are used to embed the expression computerInput in the template literal and then concatenate it with the string './img/' to get the path to the image file that we want to display onto the computer.
 }
-// Event Listeners
-// Calling its addEventlistener method registers the
-// second argument to be called when ever the event
-// described by the first argument occurs.
-// The event is called when the user clicks on the image.
-// querySelectorAll allows us to use the forEach method on the list of elements that match a specified CSS selector(s) in the document. The forEach method/loop essentially executes a provided function once for each array element. The callback function is passed on three arguments. The first argument is the current element being processed. The second argument is the index of the current element being processed. The third argument is the array object.
-// So choices.forEach((choice) => {
-//  choice.addEventListener('click: ', function () {
-//
-// The event is called when the user clicks on the image.
-//}) creates a function that sets the playerInput to the value of the image that the user clicked on. const playerInput = this.value; is the same as const playerInput = this.getAttribute('value'); it gets the value of the attribute value. And this.value is the value of the image that the user clicked on. So when the user clicks on the image, the value of the image is set to the playerInput. The value of the image is then passed to the function updateMoves. And the function updateMoves is called. So the image of the player's choice is displayed in the player's move box and the computer's choice is displayed in the computer's move box. The image is dynamically changed to the image of the player's choice. The image is also dynamically changed to the image of the computer's choice. Using template literals, the player's choice is displayed in the player's move box. Same for the computer's choice. Template literals are string literals allowing embedded expressions. embedded expressions are expressions of the form ${playerInput} or ${computerInput} dynamically change the image of the player's and computer's choice.
-// So choices.forEach((choice) => {}) is a forEach loop that loops through the list of elements that match a specified CSS selector(s) in the document. In our case it is the list of choices. Rock Paper Scissors are the choices. So the forEach loop loops through the list of choices.
-// this.value is the value of the image that the user clicked on in our case the value is set to the id of the image which is rock, paper, or scissors and the value is passed to the function updateMoves when the user clicks on the image of the choice that the user chose and the function updateMoves is called and the image of the player's choice is displayed in the player's move box and the computer's choice is displayed in the computer's move box. The image is dynamically changed to the image of the player's choice. The image is also dynamically changed to the image of the computer's choice. Using template literals, the player's choice is displayed in the player's move box. Same for the computer's choice. Template literals are string literals allowing embedded expressions. embedded expressions are expressions of the form ${playerInput} or ${computerInput} dynamically change the image of the player's and computer's choice. So the forEach loop loops through the list of choices.
+
+// choices.forEach is a method that executes a provided function once for each array element.
+// The callback function is passed on three arguments.
+// The first argument is the current element being processed.
+// The second argument is the index of the current element being processed.
+// The third argument is the array object.
+
 choices.forEach((choice) => {
   choice.addEventListener('click', function () {
-    // console.log('Player clicked: ', this.innerText);
     const playerInput = this.value;
+    // this.value is a property that returns the value of the selected option.
+    // this.value is equal to the value of the button that the player clicked on.
+    // forEach is a method that executes a provided function once for each array element.
+    // The callback function is passed on three arguments.
+    // The first argument is the current element being processed.
+    // The second argument is the index of the current element being processed.
+    // The third argument is the array object.
+    // The computerInput is equal to the value of the computer's choice. Which is a random number from our array of choices (0, 1, or 2).
+
+    // this.value which is rock, paper, or scissors and the value is passed to the function updateMoves when the user clicks on the image of the their choice. The value is then passed to the function updateMoves. And the function updateMoves is called. So the image of the player's choice is displayed in the player's move box and the computer's choice is displayed in the computer's move box. The image is dynamically changed to the image of the player's choice. The image is also dynamically changed to the image of the computer's choice.
 
     // This also gives us random choices for the computerPlay() function
     //
@@ -89,18 +75,7 @@ choices.forEach((choice) => {
     const computerSelection = ['Rock', 'Paper', 'Scissors'];
     const computerInput = computerSelection[Math.floor(Math.random() * 3)];
 
-    // updateMoves is a function that updates the moves.
-    // It takes two arguments, playerInput and computerInput.
-    // The function updates the moves and displays the result.
-    // The function also checks for a winner.
-    // If there is a winner, the function disables the buttons.
-    // If there is no winner, the function updates the score.
-    // playRound is a function that also takes two arguments, playerInput and computerInput.
-    // The function updates the moves and displays the result.
-    // updateScore is a function that updates the score.
-    // checkWinner is a function that checks for a winner.
-    // If there is a winner, the function disables the buttons.
-    // If there is no winner, the function updates the score.
+    // These will all be called or invoked when the player clicks on the buttons.
 
     updateMoves(playerInput, computerInput);
     playRound(playerInput, computerInput);
@@ -112,16 +87,15 @@ choices.forEach((choice) => {
   });
 });
 
+// The playRound function gives our app logic to play a round of the game and determine the winner of the round
+// playRound is a function that plays a round of the game and updates the score and the round results on the screen and in the console log if the player wins, loses, or ties the round.
+// It takes in two parameters.
 function playRound(playerInput, computerInput) {
   // currentMatch is a function that takes two arguments, playerInput and computerInput.
-  // The function also dynamically updates the moves and displays the result.
-  // The function also checks for a winner.
-  // If there is a winner, the function disables the buttons.
-  // If there is no winner, the function updates the score.
-  // The function also checks for a tie.
-
+  // The currentMatch function is called when the player clicks on the buttons.
+  // The function also updates the round results on the screen and in the console if the player wins, loses, or ties the round.
+  // the current match calls the two arguments playerInput and computerInput and passes them to the variable currentMatch which then display's the round results dynamically with the information inside the template literal and the ebbedded expression onto the screen and the console log if the player wins, loses, or ties the round.
   const currentMatch = `${playerInput} vs ${computerInput}`;
-
   // Tie check
   // Using a template literal, we can create a string that will be displayed in the results box.
   // The string will be displayed when the player and computer both choose the same option.
@@ -134,8 +108,7 @@ function playRound(playerInput, computerInput) {
     roundTie.textContent = `${currentMatch} - It's a tie!`;
     return 'Tie';
   }
-
-  // Rock check
+  // Rock
   // Using a template literal, we can create a string that contains the playerInput and computerInput.
   // We can then use the string to check if the playerInput is equal to the computerInput.
   // If the playerInput is equal to the computerInput, the function returns true.
@@ -155,46 +128,34 @@ function playRound(playerInput, computerInput) {
       // The function also checks for a winner.
       roundLose.textContent = `${currentMatch} - You Lose!`;
       computerScore++;
+      // return allows us to break out of the function.
       return 'You Lose!';
+      // Whenever JavaScript sees the return keyword, it immediately exits the function and any variable (or value) you pass after return will be returned back as a result.
     }
   }
-
-  // Paper check
-
-  //
+  // Paper
   else if (playerInput === 'Paper') {
     if (computerInput === 'Rock') {
-      // Using the template literal, we can create a string that contains the playerInput and computerInput.
+      // Using the template literal, we can create a string that contains the playerInput and computerInput then will be output to the screen and the console log when we click on our button/image of choice.
       console.log(`${currentMatch} - You Win!`);
-      // roundWin is a function that updates the currentMatch.
-      // The function also dynamically updates the moves and displays the result.
+      // roundWin is a variable that updates the currentMatch.
+      // It also dynamically updates the moves and displays the result on the screen.
       roundWin.textContent = `${currentMatch} - You Win!`;
-      // playerScore++ increments the playerScore by 1.
-      // The function also checks for a winner.
-
+      // Increment the playerScore by 1.
       playerScore++;
+      // return allows us to break out of the function.
       return 'You Win!';
     } else {
       console.log(`${currentMatch} - You Lose!`);
-      // roundlose is also a function that updates the currentMatch.
-      // The function also dynamically updates the moves and displays the result.
-      // The function also checks for a winner.
-
       roundLose.textContent = `${currentMatch} - You Lose!`;
-      // computerScore++ increments the computerScore by 1.
-      //  The function also checks for a winner.
-
       computerScore++;
       return 'You Lose!';
     }
   }
-
-  // Scissors check
+  // Scissors
   else {
     if (computerInput === 'Paper') {
       console.log(`${currentMatch} - You Win!`);
-      // The function also dynamically updates the moves and displays the result.
-      // roundWin is a function that updates the currentMatch.
       roundWin.textContent = `${currentMatch} - You Win!`;
       playerScore++;
       return 'You Win!';
@@ -206,29 +167,27 @@ function playRound(playerInput, computerInput) {
     }
   }
 }
+/////////////////  Stop Part 1 //////////////////////
 
+/////////////////////////////////////////////////////
 // updateScore is a function that updates the score.
 // querySelector is a method that returns the first element that matches a specified CSS selector(s) in the document.
 // textContent is a property that sets or returns the text content of the specified node.
-//
 function updateScore() {
   document.querySelector('#player-score').textContent = playerScore;
   document.querySelector('#computer-score').textContent = computerScore;
 }
 
 // checkWinner is a function that checks for a winner.
-//
 function checkWinner() {
-  // If the playerScore is greater than or equal to 5, the function returns true;
-  // If the playerScore is less than 5, the function returns false;
-
+  // If the playerScore or computerScore is equal to 5, the function returns true;
+  // If the playerScore or computerScore is less than 5, the function returns false;
   // the condition is, if the playerScore is equal to 5, or computerScore is equal to 5.
-  // if (playerScore === 5 || computerScore === 5)
+
   //  return true;
   // else return false;
-
   if (playerScore === 5 || computerScore === 5) {
-    // const winner is a function that takes two arguments, playerScore and computerScore.
+    // const winner is a variable that takes two arguments, playerScore and computerScore.
     const winner =
       // If the playerScore is equal to 5, the function returns true;
       playerScore === 5
